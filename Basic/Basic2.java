@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Basic2 {
     public static void main(String[] args) {
         basic2();
-
+        basic3();
     }
 
     private static void basic2() {
@@ -16,5 +16,23 @@ public class Basic2 {
         in.close();
         int sum = firstNumber + secondNumber;
         System.out.println("Sum of given numbers is: " + sum);
+    }
+
+    private static void basic3() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Program calculating quotient of division");
+        System.out.println("Enter the dividend:");
+        int firstNumber = in.nextInt();
+        System.out.println("Enter the divider:");
+        int secondNumber = in.nextInt();
+        in.close();
+        if (secondNumber != 0) {
+            int quotient = firstNumber/secondNumber;
+            System.out.println("The quotient is: " + quotient);
+        } 
+        else {
+            System.out.println("Can't divide by zero");
+        }
+        
     }
 }
