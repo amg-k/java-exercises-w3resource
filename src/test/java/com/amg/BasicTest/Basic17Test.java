@@ -1,7 +1,7 @@
 package com.amg.BasicTest;
 
 import org.junit.*;
-import package.Basic17;
+import com.amg.Basic.Basic17;
 
 public class Basic17Test {
     

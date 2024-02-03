@@ -34,7 +34,7 @@ public class Basic17 {
         return new int[] { firstBinary, secondBinary };
     }
 
-    private static int addBinaryNumbers(int binary1, int binary2) {
+    public static int addBinaryNumbers(int binary1, int binary2) {
         int[] sum = new int[20];
         int i = 0;
         int reminder = 0;
