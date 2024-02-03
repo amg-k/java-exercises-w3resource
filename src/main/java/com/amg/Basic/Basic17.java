@@ -1,3 +1,5 @@
+package com.amg.Basic;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
