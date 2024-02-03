@@ -15,7 +15,7 @@ public class Basic17 {
         
         System.out.println(Math.addExact(firstBinary, secondBinary)); */
 
-        Basic17.addBinaryNumbers(1010, 101);
+        Basic17.addBinaryNumbers(1010, 10100);
     }
 
     public int[] getDataFromConsole(String greeting, String message1, String message2) {
