@@ -12,9 +12,14 @@ public class Basic17Test {
 
     @Test
     public void testAddBinaryNumbers() {
-        int binary1 = 0b10010;
-        int binary2 = 0b110;
+        int binary1 = 10010;
+        int binary2 = 110;
 
-        Assert.assertEquals(Math.addExact(binary1, binary2), Basic17.addBinaryNumbers(binary1, binary2));
+        int decimal1 = Integer.parseInt(String.valueOf(binary1), 2);
+        int decimal2 = Integer.parseInt(String.valueOf(binary2), 2);
+
+        int sum = decimal1 + decimal2;
+
+        Assert.assertEquals(Integer.toBinaryString(sum), Basic17.addBinaryNumbers(binary1, binary2));
     }
 }

@@ -17,7 +17,7 @@ public class Basic17 {
         
         System.out.println(Math.addExact(firstBinary, secondBinary)); */
 
-        Basic17.addBinaryNumbers(1010, 10100);
+        Basic17.addBinaryNumbers(10010, 110);
     }
 
     public int[] getDataFromConsole(String greeting, String message1, String message2) {
@@ -34,18 +34,19 @@ public class Basic17 {
         return new int[] { firstBinary, secondBinary };
     }
 
-    public static int addBinaryNumbers(int binary1, int binary2) {
-        int[] sum = new int[20];
-        int i = 0;
+    public static String addBinaryNumbers(int binary1, int binary2) {
+        StringBuilder sum = new StringBuilder();
         int reminder = 0;
 
         while (binary1 != 0 || binary2 != 0) {
-            sum[i++] = (int) ((binary1 % 10 + binary2 % 10 + reminder) % 2);
+            sum.append(Integer.toString((int) ((binary1 % 10 + binary2 % 10 + reminder) % 2)));
             reminder = (int) ((binary1 % 10 + binary2 % 10 + reminder) / 2);
             binary1 = (int) binary1 / 10;
             binary2 = (int) binary2 / 10;
         }
-        System.out.println(Arrays.toString(sum));
-        return 0;
+        
+        sum.reverse();
+
+        return sum.toString();
     }
 }
