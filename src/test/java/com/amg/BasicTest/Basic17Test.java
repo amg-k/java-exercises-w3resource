@@ -14,7 +14,11 @@ public class Basic17Test {
 
     @Test
     public void testConsoleInput() {
-        
+        String data = "10010";
+        provideIput(data);
+        int readedInt = Basic17.getIntFromConsoleWithMessage("test");
+
+        Assert.assertEquals(Integer.parseInt(data), readedInt);
     }
 
     @Test
