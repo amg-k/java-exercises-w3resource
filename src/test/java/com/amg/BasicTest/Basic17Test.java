@@ -14,15 +14,19 @@ public class Basic17Test {
 
     @Test
     public void testConsoleInput() {
+        Basic17 calc = new Basic17();
+        
         String data = "10010";
         provideIput(data);
-        int readedInt = Basic17.getIntFromConsoleWithMessage("test");
+        int readedInt = calc.getIntFromConsoleWithMessage("test");
 
         Assert.assertEquals(Integer.parseInt(data), readedInt);
     }
 
     @Test
     public void testAddBinaryNumbers() {
+        Basic17 calc = new Basic17();
+        
         int binary1 = 10010;
         int binary2 = 110;
 
@@ -31,6 +35,6 @@ public class Basic17Test {
 
         int sum = decimal1 + decimal2;
 
-        Assert.assertEquals(Integer.toBinaryString(sum), Basic17.addBinaryNumbers(binary1, binary2));
+        Assert.assertEquals(Integer.toBinaryString(sum), calc.addBinaryNumbers(binary1, binary2));
     }
 }

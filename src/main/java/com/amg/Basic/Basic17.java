@@ -3,23 +3,33 @@ package com.amg.Basic;
 import java.util.Scanner;
 
 public class Basic17 {
+    final String GREETING = "Program calculating sum of two binary numbers";
+    final String MESSAGE1 = "Input first binary number: ";
+    final String MESSAGE2 = "Input second binary number: ";
+    
+    int binary1, binary2;
+    String result;
+    Scanner input;
+
     public static void main(String[] args) {
-        String greeting = "Program calculating sum of two binary numbers";
-        String message1 = "Input first binary number: ";
-        String message2 = "Input second binary number: ";
+        Basic17 calc = new Basic17();
 
-        System.out.println(greeting);
+        calc.calculateWithMessages();
+    }
 
-        int binary1 = Basic17.getIntFromConsoleWithMessage(message1);
-        int binary2 = Basic17.getIntFromConsoleWithMessage(message2);
+    void calculateWithMessages() {
+        System.out.println(GREETING);
+
+        binary1 = getIntFromConsoleWithMessage(MESSAGE1);
+        binary2 = getIntFromConsoleWithMessage(MESSAGE2);
         
-        String result = Basic17.addBinaryNumbers(binary1, binary2);
+        result = addBinaryNumbers(binary1, binary2);
 
         System.out.println(result);
     }
 
-    static public int getIntFromConsoleWithMessage(String message) {
-        Scanner input = new Scanner(System.in);
+    public int getIntFromConsoleWithMessage(String message) {
+        input = new Scanner(System.in);
         
         System.out.print(message);
         
@@ -28,7 +38,7 @@ public class Basic17 {
         return num;
     }
     
-    public static String addBinaryNumbers(int binary1, int binary2) {
+    public String addBinaryNumbers(int binary1, int binary2) {
         StringBuilder sum = new StringBuilder();
         int reminder = 0;
 
