@@ -1,10 +1,17 @@
 package com.amg.BasicTest;
 
+import java.io.ByteArrayInputStream;
+
 import org.junit.*;
 import com.amg.Basic.Basic17;
 
 public class Basic17Test {
     
+    void provideIput(String data) {
+        ByteArrayInputStream testIn = new ByteArrayInputStream(data.getBytes());
+        System.setIn(testIn);
+    }
+
     @Test
     public void testConsoleInput() {
         
