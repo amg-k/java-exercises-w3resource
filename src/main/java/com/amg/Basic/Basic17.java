@@ -1,6 +1,5 @@
 package com.amg.Basic;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Basic17 {
@@ -13,20 +12,6 @@ public class Basic17 {
         String result = Basic17.addBinaryNumbers(addends[0], addends[1]);
 
         System.out.println(result);
-
-        /*         System.out.println("Program calculating sum of two binary numbers");
-                
-        Scanner input = new Scanner(System.in);
-        System.out.print("Input first binary number: ");
-        int firstBinary = Integer.bitCount(input.nextInt());
-        
-        System.out.print("Input second binary number: ");
-        int secondBinary = Integer.bitCount(input.nextInt());
-        input.close();
-        
-        System.out.println(Math.addExact(firstBinary, secondBinary)); */
-
-        //Basic17.addBinaryNumbers(10010, 110);
     }
 
     static public int[] getDataFromConsole(String greeting, String message1, String message2) {
@@ -34,10 +19,10 @@ public class Basic17 {
 
         Scanner input = new Scanner(System.in);
         System.out.print(message1);
-        int firstBinary = Integer.bitCount(input.nextInt());
+        int firstBinary = input.nextInt();
         
         System.out.print(message2);
-        int secondBinary = Integer.bitCount(input.nextInt());
+        int secondBinary = input.nextInt();
         input.close();
 
         return new int[] { firstBinary, secondBinary };
@@ -54,6 +39,9 @@ public class Basic17 {
             binary2 = (int) binary2 / 10;
         }
         
+        if (reminder == 1) {
+            sum.append(reminder);
+        }
         sum.reverse();
 
         return sum.toString();
