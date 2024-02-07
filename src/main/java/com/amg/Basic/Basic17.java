@@ -5,7 +5,16 @@ import java.util.Scanner;
 
 public class Basic17 {
     public static void main(String[] args) {
-/*         System.out.println("Program calculating sum of two binary numbers");
+        String greeting = "Program calculating sum of two binary numbers";
+        String message1 = "Input first binary number: ";
+        String message2 = "Input second binary number: ";
+
+        int[] addends = Basic17.getDataFromConsole(greeting, message1, message2);
+        String result = Basic17.addBinaryNumbers(addends[0], addends[1]);
+
+        System.out.println(result);
+
+        /*         System.out.println("Program calculating sum of two binary numbers");
                 
         Scanner input = new Scanner(System.in);
         System.out.print("Input first binary number: ");
@@ -17,10 +26,10 @@ public class Basic17 {
         
         System.out.println(Math.addExact(firstBinary, secondBinary)); */
 
-        Basic17.addBinaryNumbers(10010, 110);
+        //Basic17.addBinaryNumbers(10010, 110);
     }
 
-    public int[] getDataFromConsole(String greeting, String message1, String message2) {
+    static public int[] getDataFromConsole(String greeting, String message1, String message2) {
         System.out.println(greeting);
 
         Scanner input = new Scanner(System.in);
